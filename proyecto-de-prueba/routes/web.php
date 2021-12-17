@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+// Route::get('/', function () {
+//     return view('agenda');
+// });
+
+Route::get('/set_language/{lang}', [Controller::class, 'set_language'])->name('set_language');
+
+//Route::get('/bienvenido', BorrarController::class);
+//Route::get('/bienvenido', [BorrarController::class, "index"]);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

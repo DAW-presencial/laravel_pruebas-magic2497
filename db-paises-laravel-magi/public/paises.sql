@@ -1,5 +1,3 @@
- 
-
 INSERT INTO paises (codigoISO3, codigoISO2, cod_numerico, nombre) VALUES
 ('AND',	'AD',	20,	'Andorra'),
 ('ARE',	'AE',	784,	'Emiratos Árabes Unidos'),
